@@ -40,3 +40,7 @@ Each store reads its own `.env` file from its directory:
 
 - `ms/.env` — Meat Sticks & Chocolate config
 - `fs/.env` — Plant Sales config
+
+
+scp ~/Documents/Projects/church/phpchurch/html/fundraisers/ms/.env pi@10.0.0.51:~/html/fundraisers/ms/.env
+scp ~/Documents/Projects/church/phpchurch/html/fundraisers/fs/.env pi@10.0.0.51:~/html/fundraisers/fs/.env
