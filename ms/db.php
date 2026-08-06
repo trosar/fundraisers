@@ -33,6 +33,7 @@ $user = getenv($env_prefix . 'DB_USER');
 $pass = getenv($env_prefix . 'DB_PASS');
 $tab_prefix = getenv($env_prefix . 'DB_TAB_PREFIX');
 $gtag_version = getenv($env_prefix . 'GTAG_VERSION');
+$url_prefix = getenv($env_prefix . 'URL_PREFIX');
 $charset = 'utf8mb4';
 
 $store_is_prod = strtolower(getenv($env_prefix . 'STORE_IS_PROD') === 'true'); //If place order actually writes to DB or not

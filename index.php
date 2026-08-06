@@ -1,6 +1,8 @@
+<?php 
+require_once 'ms/db.php'; 
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Scout Fundraiser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
