@@ -13,6 +13,8 @@ $page_title = $page_title ?? 'Plant Sales'; // Default title if not set
 </head>
 <body>
 <div class="header">
+    <!-- FS <?php echo $url_prefix; ?> -->
+
     <a href="<?php echo $url_prefix; ?>"><img class="troop_logo" src="media/Troop_60_Logo.png" alt="Troop 60 Logo"></a>
     <h2><?php echo htmlspecialchars($page_title); ?></h2>
 </div>
