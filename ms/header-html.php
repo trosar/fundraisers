@@ -22,6 +22,6 @@ $page_title = $page_title ?? 'Meat Sticks & Chocolate Fundraiser'; // Default ti
 </script>
 <body>
 <div class="header">
-    <a href="/fundraisers/"><img class="troop_logo" src="media/Troop_60_Logo.png" alt="Troop 60 Logo"></a>
+    <a href="<?php echo $url_prefix; ?>"><img class="troop_logo" src="media/Troop_60_Logo.png" alt="Troop 60 Logo"></a>
     <h2><?php echo htmlspecialchars($page_title); ?></h2>
 </div>
