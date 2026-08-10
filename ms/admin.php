@@ -30,6 +30,8 @@ if (isset($_POST['password'])) {
     
     if ($admin_password && $_POST['password'] === $admin_password) {
         $_SESSION['admin_logged_in'] = true;
+        // Uncomment this if the select is added below
+        // $tab_prefix = $_POST['fundraiser'];
     } else {
         $error = "Incorrect password!";
     }
@@ -194,6 +196,14 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
             <h2>Scout Fundraiser Admin</h2>
             <?php if (isset($error)) echo "<p class='error-message'>$error</p>"; ?>
             <form method="POST">
+<!-- 
+                <div class="form-group">
+                    <select name="fundraiser" required>
+                        <option value="ms_2026" <?php echo ($tab_prefix === 'ms_2026') ? 'selected' : ''; ?>>Meat Sticks & Chocolate 2026</option>
+                        <option value="ms_2027" <?php echo ($tab_prefix === 'ms_2027') ? 'selected' : ''; ?>>Meat Sticks & Chocolate 2027</option>
+                    </select>
+                </div>
+ -->
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Enter Password" required><br>
                 </div>
