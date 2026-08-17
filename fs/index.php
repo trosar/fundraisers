@@ -72,6 +72,8 @@ if ($store_is_open) {
                 <a href="view_order.php">Look Up Your Orders</a>
                 |
                 <a href="admin.php">Admin Login</a>
+                |
+                <a href="<?php echo $url_prefix; ?>">Fundraiser Home</a>
             </small>
         </div>    
 
