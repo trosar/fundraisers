@@ -1,13 +1,13 @@
-FROM php:8.2-cli
+FROM php:8.4-cli
 
-# Install the PDO MySQL extension
+# Install system dependencies required for extensions if needed, and the PDO MySQL extension
 RUN docker-php-ext-install pdo_mysql
 
-# Create the images directories and set permissions
-RUN mkdir -p /var/www/html/ms/images /var/www/html/fs/images && chmod -R 777 /var/www/html/ms/images /var/www/html/fs/images
-
-# Set the working directory
+# Set the working directory first so relative paths match
 WORKDIR /var/www/html
+
+# Create the images directories and set strict permissions (Avoid 777 in production if possible)
+RUN mkdir -p ms/images fs/images && chmod -R 755 ms/images fs/images
 
 # Copy all application files
 COPY . .
@@ -16,3 +16,4 @@ COPY . .
 EXPOSE 8080
 
 CMD ["php", "-S", "0.0.0.0:8080"]
+
